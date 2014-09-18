@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane fx:id="welcomeTab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabController">
+   <children>
+      <TabPane fx:id="tabHolder" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="SELECTED_TAB">
+        <tabs>
+          <Tab text="Welcome">
+               <content>
+                  <BorderPane prefHeight="359.0" prefWidth="600.0">
+                     <left>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="filenameTF" prefHeight="25.0" prefWidth="96.0" promptText="Filename">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#addOnAction" text="Add" />
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>

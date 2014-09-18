@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane id="projectpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProjectPageController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="262.0" minHeight="262.0" prefHeight="262.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="263.0" minHeight="263.0" prefHeight="263.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Property Files">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="4.0" prefWidth="250.0" />
+                  <Label text="Masking Property File" />
+                  <TextField fx:id="maskPropFileTF" editable="false" onMouseClicked="#maskPropFileAction" />
+                  <Label text="Distribution Key Property File" />
+                  <TextField fx:id="distPropFileTF" editable="false" onMouseClicked="#distPropFileAction" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Distribution Keys">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="4.0" prefWidth="200.0" />
+                  <ListView fx:id="distKeyLV" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="addKeyBtn" mnemonicParsing="false" onAction="#addKeyAction" prefHeight="25.0" prefWidth="215.0" text="Add Key" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Masking Rules">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="4.0" prefWidth="200.0" />
+                  <ListView fx:id="maskRuleLV" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="addRuleBtn" mnemonicParsing="false" onAction="#addRuleAction" prefHeight="25.0" prefWidth="212.0" text="Add Rule" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Project Folders">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="4.0" prefWidth="300.0" />
+                  <Label text="Project Folder" />
+                  <TextField fx:id="projectFolderTF" editable="false" onMouseClicked="#projectFolderAction" />
+                  <Label text="Distribution Output Folder" />
+                  <TextField fx:id="distOutputFolderTF" editable="false" onMouseClicked="#distFolderAction" />
+                  <Label text="XML Output Folder" />
+                  <TextField editable="false" onMouseClicked="#xmlFolderAction" fx:id="xmlOutputFolderTF" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Separator layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="closeBTN" mnemonicParsing="false" onAction="#closeOnAction" text="Close" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
